@@ -5,6 +5,8 @@ warnings.filterwarnings("ignore")  # 忽略警告信息
 
 import _env_fix  # 必须在导入 torch/ultralytics 之前导入：剔除 PATH 中冲突的 cuDNN 目录
 
+from _callbacks import print_per_class_metrics  # 每个 epoch 验证后按类别打印指标
+
 from ultralytics import YOLO  # 导入YOLO模块
 
 # 项目根目录（本文件位于 src/ 下，其上一级即项目根），
@@ -17,6 +19,8 @@ def main():
     model = YOLO(
         model=str(PROJECT_ROOT / "models" / "yolov8n.pt")
     )  # 加载yolov8n预训练权重
+
+    model.add_callback("on_fit_epoch_end", print_per_class_metrics)
 
     # 训练模型，使用以下参数
     model.train(
