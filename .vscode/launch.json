@@ -18,6 +18,20 @@
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",
       "justMyCode": true
+    },
+    {
+      "name": "转换 ONNX (convert_onnx.py)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/convert_onnx.py",
+      "args": [
+        "${workspaceFolder}/onnx/best.pt",
+        "-o",
+        "${workspaceFolder}/onnx/best.onnx"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
     }
   ]
 }

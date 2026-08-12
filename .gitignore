@@ -10,6 +10,7 @@ wheels/
 .venv
 .reasonix
 runs/
+onnx/
 AGENTS.md
 CONTEXT.md
 
