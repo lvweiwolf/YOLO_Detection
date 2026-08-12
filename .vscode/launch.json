@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "训练 (train.py)",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/src/train.py",
       "python": "${workspaceFolder}/.venv/Scripts/python.exe",
@@ -13,7 +13,7 @@
     },
     {
       "name": "推理 (eval.py)",
-      "type": "python",
+      "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/src/eval.py",
       "python": "${workspaceFolder}/.venv/Scripts/python.exe",

@@ -1,5 +1,7 @@
 from pathlib import Path
 
+import _env_fix  # 必须在导入 onnxruntime 之前导入：剔除 PATH 中冲突的 cuDNN 目录
+
 import onnxruntime as ort
 import numpy as np
 import cv2

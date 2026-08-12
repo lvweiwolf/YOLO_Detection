@@ -3,6 +3,8 @@ from pathlib import Path
 
 warnings.filterwarnings("ignore")  # 忽略警告信息
 
+import _env_fix  # 必须在导入 torch/ultralytics 之前导入：剔除 PATH 中冲突的 cuDNN 目录
+
 from ultralytics import YOLO  # 导入YOLO模块
 
 # 项目根目录（本文件位于 src/ 下，其上一级即项目根），
@@ -27,7 +29,7 @@ def main():
         epochs=10000,  # 训练的轮数
         patience=500,
         device="0",  # 使用的设备，'cpu' 或 'Gpu'，可以指定 GPU 设备编号例如 'cuda:0'
-        batch=32,  # 每次训练输入的图片数量（批大小）。
+        batch=8,  # 每次训练输入的图片数量（批大小）。
         workers=2,
 
         # int8 = True,
