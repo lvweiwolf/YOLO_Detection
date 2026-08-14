@@ -20,14 +20,28 @@
       "justMyCode": true
     },
     {
-      "name": "转换 ONNX (convert_onnx.py)",
+      "name": "转换 ONNX (7907)",
       "type": "debugpy",
       "request": "launch",
       "program": "${workspaceFolder}/src/convert_onnx.py",
       "args": [
-        "${workspaceFolder}/onnx/best.pt",
+        "${workspaceFolder}/onnx/best_7907.pt",
         "-o",
-        "${workspaceFolder}/onnx/best.onnx"
+        "${workspaceFolder}/onnx/best_7907.onnx"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "justMyCode": true
+    },
+    {
+      "name": "转换 ONNX (物流)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/src/convert_onnx.py",
+      "args": [
+        "${workspaceFolder}/onnx/best_物流.pt",
+        "-o",
+        "${workspaceFolder}/onnx/best_物流.onnx"
       ],
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal",

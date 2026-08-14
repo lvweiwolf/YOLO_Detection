@@ -33,8 +33,8 @@ def main():
         epochs=10000,  # 训练的轮数
         patience=500,
         device="0",  # 使用的设备，'cpu' 或 'Gpu'，可以指定 GPU 设备编号例如 'cuda:0'
-        batch=8,  # 每次训练输入的图片数量（批大小）。
-        workers=2,
+        batch=32,  # 每次训练输入的图片数量（批大小）。
+        workers=6,
 
         # int8 = True,
         # 以下是一些图像增强相关的参数
@@ -45,7 +45,7 @@ def main():
 
         name="yolov8",  # 实验名称，保存时会生成一个文件夹名为 runs/train/yolov8
         single_cls=False,  # 是否只训练一个类别（即检测单一物体），设置为True时会忽略类别信息
-        cache=True,  # 是否将数据集缓存到内存中，以提高训练速度
+        cache=False,  # 是否将数据集缓存到内存中，以提高训练速度
 
         # 额外的超参数（其余参数使用默认值）
         # 以下是YOLOv12训练过程中的一些参数设置：
