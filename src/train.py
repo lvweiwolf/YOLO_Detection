@@ -25,7 +25,7 @@ def main():
     # 训练模型，使用以下参数
     model.train(
         data=str(
-            PROJECT_ROOT / "models" / "data.yaml"
+            PROJECT_ROOT / "models" / "data_物流.yaml"
         ),  # 数据集配置文件路径，包含训练集和验证集路径，以及类别信息
 
         
@@ -34,7 +34,7 @@ def main():
         patience=500,
         device="0",  # 使用的设备，'cpu' 或 'Gpu'，可以指定 GPU 设备编号例如 'cuda:0'
         batch=32,  # 每次训练输入的图片数量（批大小）。
-        workers=6,
+        workers=4,
 
         # int8 = True,
         # 以下是一些图像增强相关的参数

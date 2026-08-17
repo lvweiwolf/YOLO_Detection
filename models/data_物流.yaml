@@ -1,0 +1,10 @@
+# data.yaml 内容示例
+path: E:/资料/物流/数据/原始/Dataset_物流_20260813 # 数据集根目录
+train: images/train  # 训练图像路径（相对于path）
+val: images/val      # 验证图像路径（相对于path）
+test: images/test    # 测试图像路径（可选）
+
+nc: 6  # 类别数量
+
+# 类别名称（顺序需与标注文件一致）
+names: ["人员","料盘","标签-1张", "标签-2张", "贴标", "手"]
